@@ -15,14 +15,15 @@ import faiss # For RAG
 # ASR (Faster Whisper)
 WHISPER_MODEL_SIZE = "base.en"  # Options: "tiny.en", "base.en", "small.en", "medium.en", "large-v2", "large-v3"
 WHISPER_DEVICE = "cuda" # "cuda" or "cpu"
-WHISPER_COMPUTE_TYPE = "float16" # "float16" for GPU, "int8" for CPU (or "float32")
+WHISPER_COMPUTE_TYPE = "int8_float16" # "float16" for GPU, "int8" for CPU (or "float32")
 
 # LLM (Llama.cpp)
 # Download GGUF model (e.g., from TheBloke on HuggingFace)
-# Example: https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF
+# Example: https://huggingface.co/TheBloke/
+# Mistral-7B-Instruct-v0.2-GGUF
 # OR Dolphin: https://huggingface.co/TheBloke/dolphin-2.2.1-mistral-7B-GGUF
 LLM_MODEL_PATH = "./models/dolphin-2.2.1-mistral-7b.Q4_K_M.gguf" # <--- SET THIS PATH
-N_GPU_LAYERS = 35  # Number of layers to offload to GPU. Set to 0 for CPU only. Adjust based on VRAM.
+N_GPU_LAYERS = 30  # Number of layers to offload to GPU. Set to 0 for CPU only. Adjust based on VRAM.
 N_CTX = 2048     # Context window size for LLM
 
 # RAG
@@ -42,7 +43,7 @@ TTS_DEVICE = "cuda" # "cuda" or "cpu"
 # Audio Recording
 SAMPLE_RATE = 16000 # Whisper prefers 16kHz
 CHANNELS = 1
-RECORD_DURATION = 7 # Max recording duration in seconds (can be adjusted)
+RECORD_DURATION = 12 # Max recording duration in seconds (can be adjusted)
 
 # --- Global Variables ---
 asr_model = None

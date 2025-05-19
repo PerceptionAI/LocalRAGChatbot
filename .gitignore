@@ -1,0 +1,12 @@
+
+# environmental variable API keys
+*.env
+
+# LLM files
+*.gguf
+
+# document chunks
+*.npy
+
+# index files
+*.idx
