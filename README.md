@@ -1,0 +1,1 @@
+This is a work in progress for completely local, talking chatbot where you can ask question upon providing .txt files that contain the topics for discussion.  You need an NVidia GPU to run this so it will not work on a Mac.
