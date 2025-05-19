@@ -1,0 +1,10 @@
+os
+time
+numpy
+sounddevice
+soundfile
+faster_whisper
+llama_cpp
+TTS.api
+sentence_transformers
+faiss
